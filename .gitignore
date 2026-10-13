@@ -1,0 +1,34 @@
+# Python virtual environments
+venv_core/
+venv_lagllama/
+venv_moirai/
+venv_ttm/
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Large binary / data files
+*.parquet
+data/fredmd_clean.parquet
+
+# Keep the raw FRED-MD CSV (small enough)
+!data/fred_md.csv
+
+# Outputs — keep PDFs and plots, skip large parquets
+output/forecast_errors.parquet
+output/forecasts_*.parquet
+
+# Keep summary CSV and images
+!output/rmsfe_summary.csv
+!output/rmsfe_boxplots.png
+!output/workflow_diagram.png
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+.claude/
+lag-llama/
