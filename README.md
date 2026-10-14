@@ -141,7 +141,9 @@ $$\text{RMSFE}_{\text{rel}} = \sqrt{\frac{\sum_{t} (y_{t+h} - \hat{y}_{t+h}^{\te
     ├── run_hybrid.py              # BVAR + TimesFM residual hybrid model
     ├── merge_tsfm_errors.py       # Consolidates forecast errors across models
     ├── make_plots.py              # Generates RMSFE boxplots and summary CSV
-    └── make_pipeline_diagram.py   # Generates the modern pipeline architecture visual
+    ├── make_pipeline_diagram.py   # Generates the modern pipeline architecture visual
+    ├── make_comparison_pdf.py     # Compiles the paper comparison PDF
+    └── make_report_pdf.py         # Compiles the full Stage 1 PDF report
 ```
 
 ---
@@ -181,7 +183,7 @@ Create and activate an isolated virtual environment:
 python3 -m venv venv_core
 source venv_core/bin/activate
 pip install --upgrade pip
-pip install numpy pandas scipy scikit-learn statsmodels matplotlib pyarrow
+pip install numpy pandas scipy scikit-learn statsmodels matplotlib reportlab pyarrow
 ```
 
 *(Optional foundation model packages can be installed in dedicated venvs or within `venv_core` depending on GPU/system dependencies: `timesfm`, `chronos`, `uni2ts`, `lag-llama`).*
@@ -212,6 +214,12 @@ python scripts/make_plots.py
 python scripts/make_pipeline_diagram.py
 ```
 *Outputs: `output/rmsfe_summary.csv`, `output/rmsfe_boxplots.png`, and `output/pipeline.png`.*
+
+### 6. Build PDF Reports
+```bash
+python scripts/make_report_pdf.py
+python scripts/make_comparison_pdf.py
+```
 
 ---
 
