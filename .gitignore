@@ -21,6 +21,12 @@ output/*.parquet
 !output/*.png
 !output/*.csv
 
+# ── Private Submissions (Do not push to GitHub) ────────
+FINAL_PRESENTATION_SLIDES.pdf
+FINAL_PROJECT_REPORT.pdf
+GROUP_*_SUBMISSION/
+GROUP_*_SUBMISSION.zip
+
 # ── macOS / IDE ────────────────────────────────────────
 .DS_Store
 .vscode/
